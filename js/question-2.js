@@ -1,4 +1,4 @@
-const displayAnswer2 = document.querySelector(".question_2-container");
+const gameDetails = document.querySelector(".question_2-container");
 
 const apiKey = "70becafb8a20428baaf9ed22abaff3ba";
 
@@ -12,7 +12,7 @@ async function getData() {
     const data = await response.json();
     const list = data.results;
 
-    displayAnswer2.innerHTML = "";
+    gameDetails.innerHTML = "";
 
     for (let i = 0; i < list.length; i++) {
       /*  console.log(
@@ -24,19 +24,19 @@ async function getData() {
         list[i].tags.length
     ); */
 
-      displayAnswer2.innerHTML += `<div class="gameContainer">
-                                    <p>Title: ${list[i].name}</p>
-                                    <p>Rating: ${list[i].rating}</p>
-                                    <p>Tags: ${list[i].tags.length}</p>
-                                  </div>`;
+      gameDetails.innerHTML += `<div class="gameContainer">
+                                  <p>Title: ${list[i].name}</p>
+                                  <p>Rating: ${list[i].rating}</p>
+                                  <p>Tags: ${list[i].tags.length}</p>
+                                 </div>`;
 
       if (i === 7) {
         break;
       }
     }
   } catch (error) {
-    displayAnswer2.innerHTML = errorMessage(
-      "⚠️ Oops! A problem occurred while calling the API 😢"
+    gameDetails.innerHTML = errorMessage(
+      "⚠️ Oops! An error occurred while calling the API 😢"
     );
   }
 }

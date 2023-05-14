@@ -1,4 +1,6 @@
 * {
+  /* PS! I would normally never choose to style the universal selector. I did in this case, as the MA brief said the styling wasn't important, and it was a quick way to make the UI of my delivery slightly more appealing  */
+
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   color: #1d0765;
 }

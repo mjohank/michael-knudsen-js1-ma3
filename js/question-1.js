@@ -7,4 +7,6 @@ function getRemainder(a,b) {
 }
  */
 
+// Answer:
+
 const getRemainder = (a, b) => a % b;
